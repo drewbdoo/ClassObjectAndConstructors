@@ -5,15 +5,17 @@ import java.util.Scanner;
 
 public class BankAccountMain {
     //testing git ssh
+    //testing again
     static ArrayList<BankAccount> bankAccounts = new ArrayList<>();
     public static void main(String[] args) {
 ////Step one, bank account creation
-//        BankAccount bankAccount = new BankAccount(500, "Drew");
-//        bankAccount.deposit(100);
-//        System.out.println(bankAccount.getBalance());
-////Bank transfer
-//        BankAccount bankAccount1 = new BankAccount(5000, "Sami");
-//        BankAccount bankAccount2 = new BankAccount(300, "Dave");
+        BankAccount drew = new BankAccount(500, "Drew", 1);
+//        drew.deposit(100);
+        BankAccount sami = new BankAccount(5000, "Sami", 2);
+        BankAccount dave = new BankAccount(300, "Dave", 3);
+        bankAccounts.add(drew);
+        bankAccounts.add(sami);
+        bankAccounts.add(dave);
 //        bankAccount1.withdrawal(100);
 //        bankAccount2.deposit(100);
 //        System.out.println(bankAccount1.getBalance());
