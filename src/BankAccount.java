@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class BankAccount {
     private double balance;
     private String name;
-    private double accountNumber;
+    private int accountNumber;
 
-    public BankAccount(double balance, String customerName, double accountNumber) {
+    public BankAccount(double balance, String customerName, int accountNumber) {
         this.balance = balance;
         this.name = customerName;
         this.accountNumber = accountNumber;
@@ -19,9 +19,15 @@ public class BankAccount {
     public double withdrawal(double x){
         return (balance-=x);
     };
-    public String getBalance(){
-       return (name +"'s account balance: " + balance);
+    public double getBalance(){
+       return balance;
     };
+    public String getName(){
+        return name;
+    }
+    public int getAccountNumber(){
+        return accountNumber;
+    }
 
     public BankAccount(){
         this.balance = 0;
@@ -34,9 +40,13 @@ public class BankAccount {
     public void setBalance(double x){
         balance = x;
     }
-public void setAccountNumber(int x){
+    public void setAccountNumber(int x){
         accountNumber=x;
-}
+    }
+    public void transfer(BankAccount x, double sum){
+        balance -= sum;
+        x.balance += sum;
+    }
 
 };
 
